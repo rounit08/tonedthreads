@@ -1,0 +1,102 @@
+.genderForm div {
+  height: 25%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.genderForm img {
+  width: 55vw;
+}
+
+.thinbody {
+  width: 70% !important;
+  height: 80% !important;
+}
+.genderSelection h1 {
+  color: pink;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.7em;
+}
+.genderForm div.clicked {
+  transform: scale(-2);
+}
+.maleBtn,
+.femaleBtn,
+.transBtn,
+.genderForm button {
+  border: 1px solid #ffc4d4;
+  box-shadow: 0 0 2px #ffc4d4;
+  border-radius: 8px;
+  align-self: center;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #140129;
+  color: pink;
+  font-size: 1em;
+}
+.genderForm button {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0;
+  margin-bottom: 7px;
+  background-color: transparent;
+  border: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .maleBtn,
+  .femaleBtn,
+  .transBtn,
+  .genderForm button {
+    border: 1px solid #ffc4d4;
+    box-shadow: 0 0 2px #ffc4d4;
+    border-radius: 8px;
+    width: 27vw;
+    height: 6vh;
+    align-self: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #140129;
+    color: pink;
+    font-size: 1em;
+  }
+  .genderForm button {
+    width: 90%;
+    border-radius: 0px;
+    border: none;
+    box-shadow: 0 0;
+    margin-bottom: 2px;
+    background-color: transparent;
+  }
+  .genderForm div {
+    height: 10%;
+    width: 23%;
+  }
+
+  .genderForm {
+    display: flex !important;
+    align-items: center;
+    flex-direction: row;
+  }
+  .genderSelection h1 {
+    font-size: 2.2em;
+  }
+  .genderForm img {
+    width: 12vw;
+    transform: scale(1.7);
+  }
+
+  .thinbody {
+    transform: scale(1) !important;
+    width: 30% !important;
+    height: 80% !important;
+  }
+}
+
+.active {
+  border: 2px solid pink;
+  box-shadow: 2px 2px 5px pink, -2px -2px 5px pink;
+}

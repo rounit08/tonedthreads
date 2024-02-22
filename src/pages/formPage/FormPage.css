@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap");
+
+body {
+  background-color: #400158;
+}
+
+.formwrapper {
+  position: relative;
+  background-color: #ffffff20;
+  border: 1px solid rgb(236, 175, 236);
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  height: 90vh;
+}
+
+.formwrapper form {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stepCounter {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7em;
+  color: rgb(236, 175, 236);
+  height: 5%;
+}
+
+.stepSection {
+  /* height: 80%; */
+  width: 100%;
+  margin-top: 10%;
+}
+
+.stepFlowBtn {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.stepFlowBtn button {
+  height: 3em;
+  width: 10em;
+  background-color: transparent;
+  border: 1px solid;
+  margin-top: 2em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  color: #ffc4d4;
+  background-color: rgb(29, 16, 34);
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 0 1px rgb(227, 24, 19);
+}
+
+@media only screen and (min-width: 1024px) {
+  .stepSection {
+    margin-top: 5%;
+    width: 100%;
+  }
+}
