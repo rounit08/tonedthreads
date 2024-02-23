@@ -7,10 +7,22 @@ import SkinTone from "./formStepTwo/SkinTone.jsx";
 import BodyShape from "./formStepThree/BodyShape.jsx";
 import logo from "../../components/Landingpage/landingimage.png";
 import { Link } from "react-router-dom";
-function FormPage() {
-  const { steps, currentStepIndex, step, next, isFirstStep, isLastStep, back } =
-    useMultistepForm([<GenderSelection />, <SkinTone />, <BodyShape />]);
+import { useOptions } from "../../context/OptionContext.js";
 
+function FormPage() {
+  const { selectedOptions, updateSelectedOptions } = useOptions();
+
+  const { steps, currentStepIndex, step, next, isFirstStep, isLastStep, back } =
+    useMultistepForm([
+      <GenderSelection updateSelectedOptions={updateSelectedOptions} />,
+      <SkinTone updateSelectedOptions={updateSelectedOptions} />,
+      <BodyShape updateSelectedOptions={updateSelectedOptions} />,
+    ]);
+  const handleNext = () => {
+    const { gender, skinTone, bodyShape } = selectedOptions;
+
+    console.log(gender, skinTone, bodyShape);
+  };
   return (
     <div className="formwrapper">
       <form>
@@ -38,9 +50,18 @@ function FormPage() {
               <ArrowLeftIcon /> Back
             </button>
           )}
-          <button type="button" onClick={next}>
-            {isLastStep ? "Finish" : "Next"} <ArrowRightIcon />
-          </button>
+          {/* Conditional rendering for button */}
+          {isLastStep ? (
+            <Link to="/productpage">
+              <button type="button" onClick={handleNext}>
+                Finish
+              </button>
+            </Link>
+          ) : (
+            <button type="button" onClick={next}>
+              Next <ArrowRightIcon />
+            </button>
+          )}
         </div>
       </form>
     </div>

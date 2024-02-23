@@ -4,11 +4,11 @@ const MaleSvg = () => {
   return (
     <div>
       <svg fill="#ee00ff" viewBox="0 0 512 512" version="1.1" stroke="#ee00ff">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g
           id="SVGRepo_tracerCarrier"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></g>
         <g id="SVGRepo_iconCarrier">
           {" "}

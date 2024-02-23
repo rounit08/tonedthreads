@@ -4,11 +4,15 @@ import LightSkintone from "../../../assets/svg/LightSkintone";
 import BrownSkintone from "../../../assets/svg/BrownSkintone";
 import DarkSkintone from "../../../assets/svg/DarkSkintone";
 
-const SkinTone = () => {
-  const [selectedGender, setSelectedGender] = useState(null);
+const SkinTone = ({ updateSelectedOptions }) => {
+  const [selectedSkinTone, setSelectedSkinTone] = useState(null);
 
-  const handleGenderSelection = (gender) => {
-    setSelectedGender(gender);
+  const handleSkinToneSelection = (skinTone) => {
+    setSelectedSkinTone(skinTone);
+    updateSelectedOptions((prevOptions) => ({
+      ...prevOptions,
+      skinTone: skinTone,
+    }));
   };
 
   return (
@@ -16,24 +20,26 @@ const SkinTone = () => {
       <h1>and what about your melanin?</h1>
       <form className="genderForm">
         <div
-          className={`maleBtn ${selectedGender === "male" ? "active" : ""}`}
-          onClick={() => handleGenderSelection("male")}
+          className={`maleBtn ${selectedSkinTone === "fair" ? "active" : ""}`}
+          onClick={() => handleSkinToneSelection("fair")}
         >
           {" "}
           <LightSkintone />
           <button type="button">Milky Bar</button>
         </div>
         <div
-          className={`femaleBtn ${selectedGender === "female" ? "active" : ""}`}
-          onClick={() => handleGenderSelection("female")}
+          className={`femaleBtn ${
+            selectedSkinTone === "brown" ? "active" : ""
+          }`}
+          onClick={() => handleSkinToneSelection("brown")}
         >
           {" "}
           <BrownSkintone />
           <button type="button">Brown Munda/Kudi</button>
         </div>
         <div
-          className={`transBtn ${selectedGender === "trans" ? "active" : ""}`}
-          onClick={() => handleGenderSelection("trans")}
+          className={`transBtn ${selectedSkinTone === "dark" ? "active" : ""}`}
+          onClick={() => handleSkinToneSelection("dark")}
         >
           {" "}
           <DarkSkintone />

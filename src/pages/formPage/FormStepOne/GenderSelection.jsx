@@ -4,11 +4,15 @@ import MaleSvg from "../../../assets/svg/MaleSvg";
 import FemaleSvg from "../../../assets/svg/FemaleSvg";
 import TransSvg from "../../../assets/svg/TransSvg";
 
-const GenderSelection = () => {
+const GenderSelection = ({ updateSelectedOptions }) => {
   const [selectedGender, setSelectedGender] = useState(null);
 
   const handleGenderSelection = (gender) => {
     setSelectedGender(gender);
+    updateSelectedOptions((prevOptions) => ({
+      ...prevOptions,
+      gender: gender,
+    }));
   };
 
   return (

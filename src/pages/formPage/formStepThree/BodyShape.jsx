@@ -3,11 +3,15 @@ import ThinBody from "../../../assets/images/image-removebg-preview (45).png";
 import NormalBody from "../../../assets/images/Untitled_design__14_-removebg-preview.png";
 import FatBody from "../../../assets/images/Untitled_design__13_-removebg-preview (1).png";
 
-const BodyShape = () => {
-  const [selectedGender, setSelectedGender] = useState(null);
+const BodyShape = ({ updateSelectedOptions }) => {
+  const [selectedBodyShape, setSlectedBodyShape] = useState(null);
 
-  const handleGenderSelection = (gender) => {
-    setSelectedGender(gender);
+  const handleBodyShapeSelection = (bodyShape) => {
+    setSlectedBodyShape(bodyShape);
+    updateSelectedOptions((prevOptions) => ({
+      ...prevOptions,
+      bodyShape: bodyShape,
+    }));
   };
 
   return (
@@ -15,24 +19,24 @@ const BodyShape = () => {
       <h1>and how you look yourself in mirror?</h1>
       <form className="genderForm">
         <div
-          className={`maleBtn ${selectedGender === "male" ? "active" : ""}`}
-          onClick={() => handleGenderSelection("male")}
+          className={`maleBtn ${selectedBodyShape === "thin" ? "active" : ""}`}
+          onClick={() => handleBodyShapeSelection("thin")}
         >
           {" "}
           <img src={ThinBody} alt="Thin Body" className="thinbody" />
           <button type="button">Thin</button>
         </div>
         <div
-          className={`femaleBtn ${selectedGender === "female" ? "active" : ""}`}
-          onClick={() => handleGenderSelection("female")}
+          className={`femaleBtn ${selectedBodyShape === "fit" ? "active" : ""}`}
+          onClick={() => handleBodyShapeSelection("fit")}
         >
           {" "}
           <img src={NormalBody} alt="Normal Body" className="normalbody" />
           <button type="button">Normal</button>
         </div>
         <div
-          className={`transBtn ${selectedGender === "trans" ? "active" : ""}`}
-          onClick={() => handleGenderSelection("trans")}
+          className={`transBtn ${selectedBodyShape === "fat" ? "active" : ""}`}
+          onClick={() => handleBodyShapeSelection("fat")}
         >
           {" "}
           <img src={FatBody} alt="Fat Body" className="fatbody" />
