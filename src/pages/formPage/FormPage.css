@@ -41,10 +41,10 @@ body {
 }
 
 .stepFlowBtn {
-  align-self: center;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-direction: row;
 }
 
 .stepFlowBtn button {
@@ -70,4 +70,8 @@ body {
     margin-top: 5%;
     width: 100%;
   }
+}
+
+.nextBtn {
+  align-self: flex-end;
 }

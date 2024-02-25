@@ -58,7 +58,7 @@ function FormPage() {
               </button>
             </Link>
           ) : (
-            <button type="button" onClick={next}>
+            <button type="button" onClick={next} className="nextBtn">
               Next <ArrowRightIcon />
             </button>
           )}
