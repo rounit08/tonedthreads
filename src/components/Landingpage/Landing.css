@@ -335,7 +335,7 @@
     font-family: "Lobster", cursive;
   }
   .landing__right h3:nth-child(1) {
-    font-size: 1em;
+    font-size: 0.7em;
     padding: 10px;
     margin-top: 8% !important;
   }

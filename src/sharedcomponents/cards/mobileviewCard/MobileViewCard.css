@@ -35,16 +35,20 @@
 
 .mobcard p {
   width: 90%;
-  margin-top: 5%;
   font-size: 1em;
 }
 
 @media only screen and (min-width: 1024px) {
   .mobcard p {
     width: 90%;
-    margin-top: 5%;
     font-size: 1.3em;
     font-style: italic;
     color: white;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .mobcard {
+    height: 30vh;
   }
 }
