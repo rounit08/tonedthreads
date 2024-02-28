@@ -16,20 +16,19 @@
   align-items: center;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 .cardContainer-left img {
   height: 90%;
   object-fit: contain;
   width: 90%;
   mix-blend-mode: darken;
-  position: relative;
 }
 .cardContainer-left button {
   position: absolute;
-  width: 10%;
-  height: 5%;
-  margin: 2%;
-  margin-top: 14%;
+  width: 45%;
+  height: 15%;
+  bottom: 3%;
   text-align: center;
   color: #ffc4d4;
   background-color: rgb(29, 16, 34);
@@ -39,7 +38,6 @@
   border: 1px solid #ffc4d4;
   box-shadow: 0 0 2px #ffc4d4;
   font-size: 0.9em;
-  color: #ffffff;
   font-family: "Ysabeau Office", sans-serif;
   cursor: pointer;
   font-style: italic;
@@ -52,4 +50,18 @@
   border-bottom-right-radius: 50px;
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .cardContainer-left button {
+    bottom: 4%;
+    width: 50%;
+    height: 12%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1024px) {
 }
