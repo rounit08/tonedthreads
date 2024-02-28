@@ -336,6 +336,7 @@
   }
   .landing__right h3:nth-child(1) {
     font-size: 1em;
+    padding: 10px;
     margin-top: 8% !important;
   }
   .landing__right h3 span {

@@ -1,0 +1,37 @@
+.productsContainer {
+  height: 90vh;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  overflow-y: auto;
+  padding: 20px;
+}
+.productPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productPageTop {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1%;
+}
+
+.productPageTop p {
+  padding: 1%;
+  height: 55%;
+  margin-left: 9%;
+  color: #ffc4d4;
+  background-color: rgb(29, 16, 34);
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 0 1px rgb(227, 24, 24);
+}
+
+.productPageTop h1 {
+  align-self: center;
+}
