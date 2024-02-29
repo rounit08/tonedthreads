@@ -30,8 +30,8 @@ function FormPage() {
           <img
             src={logo}
             style={{
-              height: 100,
-              width: 100,
+              height: 80,
+              width: 80,
               top: 0,
               left: 0,
               position: "absolute ",
